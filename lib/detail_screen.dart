@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatelessWidget {
+  var informationTextStyle = TextStyle(fontFamily: 'PlayfairDisplay');
+  var informationDescTextStyle = TextStyle(
+    fontFamily: 'PlayfairDisplayDesc',
+    fontSize: 16.0,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget> [
@@ -17,7 +22,8 @@ class DetailScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Montserrat',
+                    // fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -30,21 +36,30 @@ class DetailScreen extends StatelessWidget {
                       children: <Widget>[
                         Icon(Icons.emoji_events_outlined),
                         SizedBox(height: 8.0),
-                        Text('England'),
+                        Text(
+                          'England',
+                          style: informationTextStyle,
+                        ),
                       ],
                     ),
                     Column(
                       children: <Widget>[
                         Icon(Icons.stadium_outlined),
                         SizedBox(height: 8.0),
-                        Text('Old Trafford'),
+                        Text(
+                          'Old Trafford',
+                          style: informationTextStyle,
+                        ),
                       ],
                     ),
                     Column(
                       children: <Widget>[
                         Icon(Icons.home_work_outlined),
                         SizedBox(height: 8.0),
-                        Text('1878'),
+                        Text(
+                          '1878',
+                          style: informationTextStyle,
+                        ),
                       ],
                     ),
                   ]
@@ -55,7 +70,8 @@ class DetailScreen extends StatelessWidget {
                 child: Text(
                   'Manchester United Footbal Club adalah sebuah klub sepak bola profesional yang berbasis di Old Trafford, Manchester Raya, yang bermain di Liga Utama Inggris dengan piala Liga Utama Inggris terbanyak sepanjang masa.',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16.0),
+                  // style: TextStyle(fontSize: 16.0),
+                  style: informationDescTextStyle,
                 ),
               ),
               Container(
@@ -90,7 +106,6 @@ class DetailScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 }
