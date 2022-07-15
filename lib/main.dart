@@ -31,7 +31,36 @@ class DetailScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-          )
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Icon(Icons.emoji_events_outlined),
+                    SizedBox(height: 8.0),
+                    Text('England'),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Icon(Icons.stadium_outlined),
+                    SizedBox(height: 8.0),
+                    Text('Old Trafford'),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Icon(Icons.home_work_outlined),
+                    SizedBox(height: 8.0),
+                    Text('1878'),
+                  ],
+                ),
+              ]
+            ),
+          ),
         ],
       ),
       ),
