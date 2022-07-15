@@ -65,15 +65,24 @@ class DetailScreen extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.all(4.0),
-                      child: Image.asset('images/mu_2.jpg'),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('images/mu_2.jpg'),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(4.0),
-                      child: Image.asset('images/mu_3.jpeg'),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('images/mu_3.jpeg'),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(4.0),
-                      child: Image.asset('images/mu_4.jpg'),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('images/mu_4.jpg'),
+                      ),
                     ),
                   ],
                 ),
