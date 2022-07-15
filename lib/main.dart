@@ -61,6 +61,14 @@ class DetailScreen extends StatelessWidget {
               ]
             ),
           ),
+          Container(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Manchester United Footbal Club adalah sebuah klub sepak bola profesional yang berbasis di Old Trafford, Manchester Raya, yang bermain di Liga Utama Inggris dengan piala Liga Utama Inggris terbanyak sepanjang masa.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 16.0),
+            ),
+          ),
         ],
       ),
       ),
