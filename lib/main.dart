@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wiki_ball/detail_screen.dart';
+import 'package:wiki_ball/main_screen.dart';
  
 void main() => runApp(MyApp());
  
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Wiki Ball',
       theme: ThemeData(),
-      home: DetailScreen(),
+      home: MainScreen(),
     );
   }
 }
