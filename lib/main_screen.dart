@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wiki_ball/detail_screen.dart';
+import 'package:wiki_ball/model/club.dart';
 
 class MainScreen extends StatelessWidget {
   @override
