@@ -123,4 +123,56 @@ var clubList = [
       'images/bilbao_4.jpg'
     ],
   ),
+  Club(
+    name: 'Bayern München',
+    location: 'München',
+    description: 'Fußball-Club Bayern München e.V., adalah sebuah klub olahraga Jerman yang berbasis di München, Bayern. Klub ini terkenal sebagai klub paling sukses dalam sejarah sepak bola Jerman setelah memenangkan rekor 31 gelar nasional dan 20 piala nasional. FC Bayern didirikan pada tahun 1900 oleh sebelas pemain sepak bola yang dipimpin oleh Franz John. Meskipun Bayern memenangkan kejuaraan nasional pertamanya pada tahun 1932, klub tersebut tidak dipilih untuk Bundesliga pada awal tahun 1963. Klub ini memiliki periode yang sukses terbesar di tengah tahun 1970-an, di bawah kapten Franz Beckenbauer, memenangkan Piala Champions tiga kali berturut-turut (1974-1976).',
+    stadium: 'Allianz Arena',
+    yearFounded: '1900',
+    imageAsset: 'images/munchen_1.png',
+    imageForDetailScreenAsset: [
+      'images/munchen_2.jpg',
+      'images/munchen_3.jpg',
+      'images/munchen_4.jpg',
+    ],
+  ),
+  Club(
+    name: 'Borussia Dortmund',
+    location: 'Dortmund',
+    description: 'Ballspielverein Borussia 09 e.V. Dortmund adalah klub sepak bola Jerman yang berbasis di Dortmund, Rhine-Westphalia Utara. Didirikan pada tahun 1909 oleh 18 pemain sepak bola dari Dortmund, tim sepak bola bagian dari sebuah klub olahraga berbasis keanggotaan besar dengan lebih dari 145.000 anggota, membuat BVB klub olahraga dengan keanggotaan terbesar kedua di Jerman. Dortmund bermain di Bundesliga, tingkat teratas sistem liga sepak bola Jerman. Borussia Dortmund telah memenangkan sembilan kejuaraan Jerman, lima DFB-Pokal, enam DFL-Supercup, satu Liga Champions UEFA, satu Piala Winners UEFA, dan satu Piala Interkontinental. Kemenangan Piala Winners mereka pada tahun 1966 membuat mereka menjadi klub Jerman pertama yang memenangkan gelar Eropa.',
+    stadium: 'Signal Iduna Park',
+    yearFounded: '1909',
+    imageAsset: 'images/dortmund_1.png',
+    imageForDetailScreenAsset: [
+      'images/dortmund_2.jpg',
+      'images/dortmund_3.jpg',
+      'images/dortmund_4.jpg',
+    ],
+  ),
+  Club(
+    name: 'Borussia Mönchengladbach',
+    location: 'Mönchengladbach',
+    description: 'Borussia VfL 1900 Mönchengladbach e.V., dikenal sebagai Borussia Mönchengladbach, adalah klub sepak bola Jerman yang bermarkas di kota Mönchengladbach. Masa keemasan dari klub ini adalah dekade tahun 1970-an di mana mereka memenangi 5 gelar Bundesliga dan 2 gelar Piala UEFA. Setelah itu prestasi mereka menurun dan sempat merasakan pentas divisi dua liga Jerman.',
+    stadium: 'Borussia-Park',
+    yearFounded: '1900',
+    imageAsset: 'images/monchengladbach_1.png',
+    imageForDetailScreenAsset: [
+      'images/monchengladbach_2.jpg',
+      'images/monchengladbach_3.jpeg',
+      'images/monchengladbach_4.jpg',
+    ],
+  ),
+  Club(
+    name: 'VfB Stuttgart',
+    location: 'Stuttgart',
+    description: 'Vfb Stuttgart merupakan sebuah klub sepak bola Jerman yang bermarkas di Stuttgart dengan 31.082 penggemar (14 Desember 2006), VfB merupakan klub sepak bola terbesar ketujuh di Jerman dan merupakan klub terbesar di Baden-Württemberg. Klub ini memainkan pertandingan kandangnya di Gottlieb-Daimler-Stadion yang berkapasitas 55.900 kursi. Seragam mereka berwarna putih.',
+    stadium: 'Mercedes-Benz Arena',
+    yearFounded: '1893',
+    imageAsset: 'images/stuttgart_1.png',
+    imageForDetailScreenAsset: [
+      'images/stuttgart_2.jpg',
+      'images/stuttgart_3.jpg',
+      'images/stuttgart_4.jpg',
+    ],
+  ),
 ];
