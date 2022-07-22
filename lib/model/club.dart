@@ -28,7 +28,7 @@ var clubList = [
     imageAsset: 'images/mu_1.jpg',
     imageForDetailScreenAsset: [
       'images/mu_2.jpg',
-      'images/mu_3.jpg',
+      'images/mu_3.jpeg',
       'images/mu_4.jpg',
     ],
   ),
@@ -66,9 +66,9 @@ var clubList = [
     yearFounded: '1880',
     imageAsset: 'images/mc_1.png',
     imageForDetailScreenAsset: [
-      'images/mc_2.jpg'
-      'images/mc_3.jpg'
-      'images/mc_4.jpg'
+      'images/mc_2.jpg',
+      'images/mc_3.jpg',
+      'images/mc_4.jpg',
     ],
   ),
   Club(
@@ -105,9 +105,9 @@ var clubList = [
     yearFounded: '1903',
     imageAsset: 'images/atm_1.png',
     imageForDetailScreenAsset: [
-      'images/atm_2.jpg'
-      'images/atm_3.jpg'
-      'images/atm_4.jpg'
+      'images/atm_2.jpg',
+      'images/atm_3.jpg',
+      'images/atm_4.jpg',
     ],
   ),
   Club(
@@ -118,9 +118,9 @@ var clubList = [
     yearFounded: '1898',
     imageAsset: 'images/bilbao_1.png',
     imageForDetailScreenAsset: [
-      'images/bilbao_2.jpg'
-      'images/bilbao_3.jpg'
-      'images/bilbao_4.jpg'
+      'images/bilbao_2.jpg',
+      'images/bilbao_3.jpg',
+      'images/bilbao_4.jpg',
     ],
   ),
   Club(

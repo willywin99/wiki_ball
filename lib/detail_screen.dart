@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:wiki_ball/detail_screen.dart';
+import 'package:wiki_ball/model/club.dart';
 
 class DetailScreen extends StatelessWidget {
+  final Club club;
+
+  DetailScreen({required this.club});
+
   var informationTextStyle = TextStyle(fontFamily: 'PlayfairDisplay');
   var informationDescTextStyle = TextStyle(
     fontFamily: 'PlayfairDisplayDesc',
@@ -14,19 +20,52 @@ class DetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget> [
-              Image.asset('images/mu_1.jpg'),
-              Container(
-                margin: EdgeInsets.only(top: 16.0),
-                child: Text(
-                  'Manchester United',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontFamily: 'Montserrat',
-                    // fontWeight: FontWeight.bold,
+              Stack(
+                children: <Widget>[
+                  Image.asset(
+                    club.imageAsset,
+                    // width: 400,
+                    // height: 300,
+                    ),
+                  SafeArea(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: Colors.grey,
+                            child: IconButton(
+                              icon: Icon(
+                                Icons.arrow_back,
+                                color: Colors.white,
+                              ), 
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                            ),
+                          ),
+                          FavoriteButton(),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
+                  
+                  Container(
+                    margin: EdgeInsets.only(top: 16.0),
+                    child: Text(
+                      club.name,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 30.0,
+                        fontFamily: 'Montserrat',
+                        // fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
               ),
+              
               Container(
                 margin: EdgeInsets.symmetric(vertical: 16.0),
                 child: Row(
@@ -37,7 +76,7 @@ class DetailScreen extends StatelessWidget {
                         Icon(Icons.emoji_events_outlined),
                         SizedBox(height: 8.0),
                         Text(
-                          'England',
+                          club.location,
                           style: informationTextStyle,
                         ),
                       ],
@@ -47,7 +86,7 @@ class DetailScreen extends StatelessWidget {
                         Icon(Icons.stadium_outlined),
                         SizedBox(height: 8.0),
                         Text(
-                          'Old Trafford',
+                          club.stadium,
                           style: informationTextStyle,
                         ),
                       ],
@@ -57,7 +96,7 @@ class DetailScreen extends StatelessWidget {
                         Icon(Icons.home_work_outlined),
                         SizedBox(height: 8.0),
                         Text(
-                          '1878',
+                          club.yearFounded,
                           style: informationTextStyle,
                         ),
                       ],
@@ -68,7 +107,7 @@ class DetailScreen extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(16.0),
                 child: Text(
-                  'Manchester United Footbal Club adalah sebuah klub sepak bola profesional yang berbasis di Old Trafford, Manchester Raya, yang bermain di Liga Utama Inggris dengan piala Liga Utama Inggris terbanyak sepanjang masa.',
+                  club.description,
                   textAlign: TextAlign.center,
                   // style: TextStyle(fontSize: 16.0),
                   style: informationDescTextStyle,
@@ -78,34 +117,44 @@ class DetailScreen extends StatelessWidget {
                 height: 200,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    Padding(
+                  children: club.imageForDetailScreenAsset.map((img) {
+                    return Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                        child: Image.asset('images/mu_2.jpg'),
+                        child: Image.asset(img),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset('images/mu_3.jpeg'),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset('images/mu_4.jpg'),
-                      ),
-                    ),
-                  ],
+                    );
+                  }).toList(),
                 ),
               ),
             ],
           ),
         ),
+    );
+  }
+}
+
+class FavoriteButton extends StatefulWidget {
+  @override
+  _FavoriteButtonState createState() => _FavoriteButtonState();
+}
+
+class _FavoriteButtonState extends State<FavoriteButton> {
+  bool isFavorite = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        setState(() {
+          isFavorite = !isFavorite;
+        });
+      }, 
+      icon: Icon(
+        isFavorite ? Icons.favorite : Icons.favorite_border,
+        color: Colors.red,
+      ),
     );
   }
 }
